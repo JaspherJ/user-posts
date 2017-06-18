@@ -1,0 +1,1 @@
+{"version":3,"file":"prevent-unsaved-changes-guard.service.js","sourceRoot":"","sources":["prevent-unsaved-changes-guard.service.ts"],"names":[],"mappings":";;AAQA;IACI,aAAa,CAAC,SAAwB;QAClC,EAAE,CAAC,CAAC,SAAS,CAAC,IAAI,CAAC,KAAK,CAAC;YACrB,MAAM,CAAC,OAAO,CAAC,mEAAmE,CAAC,CAAC;QAExF,MAAM,CAAC,IAAI,CAAC;IAChB,CAAC;CACJ;AAPD,gEAOC"}

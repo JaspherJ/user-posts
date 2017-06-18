@@ -1,0 +1,41 @@
+﻿<div class="container">
+    <div class="col-md-6">
+        <h2>Basic List Group</h2>
+        <select  class="form-control" (change)="reloadPosts({ userId: u.value })" #u>
+            <option value="">Select a user..</option>
+            <option *ngFor ="let user of users" value="{{user.id}}">
+                {{user.name}}
+            </option>
+        </select>
+        <spinner [visible]="postsLoading"></spinner>
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let posts of postsList" (click)="getPostsBody(posts)">{{posts.title}}</li>
+        </ul>
+    </div>
+
+    <div class="col-md-6">
+
+        <div [hidden]="!display" class="panel panel-default" style="position:fixed" >
+            <div class="panel-heading">
+                <h3 class="panel-title">{{post.title}}</h3>
+            </div>
+            <div class="panel-body">
+                {{post.body}}
+
+                <div class="media" *ngFor ="let comment of comments">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object" src="..." alt="...">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">{{comment.name}}</h4>
+                        {{comment.body}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+  
